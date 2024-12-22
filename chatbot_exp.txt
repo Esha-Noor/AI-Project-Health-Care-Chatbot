@@ -1,0 +1,56 @@
+chatbot
+
+libraries:
+	re -> regular expression
+	      handle pattern matching and searching in text
+	      (used in 'check_pattern' function) 
+	pandas -> used for data manipulation and analysis, load training data from csv files (pd.read_csv)
+		  handle data in rows and columns, separate features(x) and labels(y)
+	pyttsx3 -> plain text to speech
+	warnings -> suppresses unnecessary warnings in program script, hide warnings from third party like sklearn
+	sklearn -> provide tools for machine learning and data processing
+		   preprocessing: convert string labels (disease) into numeric form using LabelEncoder
+		                  make data compatible with ML
+		   DecisionTreeClassifier: alg to train chatbot to predict disease based on symptoms
+		   _tree: provide tools to interpret decision tree models and extract rules, used in 
+			  'tree_to_code' to navigate and understand DT
+		   cross_val_score: Evaluate model's performance using k-fold cross-validation
+		   SVC: Suport vector classifier (ML model for comparison with DT performance)
+	numpy -> for numerical problems, especially with arrays, used to create vectors for symptoms in
+		 'sec_predict', process feature importance and predict probabilities, 
+		 'np.zeros(len(symptoms_dict)) initialize an array for symptom encoding
+	csv -> handle Comma Separated Values, used to read files symptom_Description.csv, symptom_severity.csv
+	       update dictionaries for description_list, severityDictionary, precuationDictionary.
+	train_test_split -> split data into 2 parts: training & testing, used to divide x(symptom features) and 
+			    y(disease labels) into x_train, x_test, y_train, y_test, with specific ratio
+			    test_size=0.33 & randomness as random_state=42, prevent overfitting
+
+Procedure:
+specify diseases to predict
+gather data (labeled data)
+choose model (Decision tree)
+trained model (split data into train and test)
+evaluate performance (cross validation)
+add precautions
+build user interface
+test with user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
